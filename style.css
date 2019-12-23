@@ -235,14 +235,13 @@ h1{
     text-align: center; */
     display : flex;  
    background-color: white;
-  width : 110px;
+  width : 93px;
   height: 49px;
   text-align: center;
-  border-color:white;
-  border-radius: .5px;
+  text-decoration: none;
+  color:black; 
   padding-left: 25px;
-  border-style: solid;
-  border-radius : 0px;
+  padding-top:12px;
   font-family: 'Poppins', sans-serif;
 }
 .main-top
