@@ -66,6 +66,7 @@ margin: 0px;
     margin: 0;
     padding-left: 0;
     list-style-type: none;
+    font-family: 'Poppins', sans-serif;
 }
 li
 {
@@ -75,6 +76,7 @@ li
 .list{
     padding-left: 8px;
     padding-right: 8px;
+    font-family: 'Poppins', sans-serif;
 }
 h1{
     position: absolute !important;
@@ -82,6 +84,7 @@ h1{
     width: 1px;
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
+    font-family: 'Poppins', sans-serif;
 }
 .color-grad
 {
@@ -106,7 +109,6 @@ h1{
 .header-b-sub
 {
     padding-left: 32px;
-    padding-right: 32px;
     width:1300px;
     height:66px;
     vertical-align: middle;
@@ -123,40 +125,57 @@ h1{
     height: 23px;
     display: flex;
     margin-top: 0px;
+    font-family: 'Poppins', sans-serif;
 
 }
 
-svg{
+.svg-icon{
     width: 70px;
     margin-top: 10px;
     margin-right: 32px;
+    padding-top: 7px;
+
 }
 .form-inline
 {
     display: inline-flex;
-    padding-left: 2rem;
+    padding-left: .625rem;
 
 }
 .form-control
 {
-    width: 700px;
-    height: 30px;
+    width: 807px;
+    height: 35px;
     display: inline-block;
     margin-bottom: 10px;
+    border-color: white;
+    border-style: none;
+    background-color: gainsboro;
+    font-family: 'Poppins', sans-serif;
+    
 }
 #search-icon
 {
     width: 18px;
     height: 18px;
     margin-top:.50rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: gainsboro;
 }
 .search-bar-icon
 {
-    padding: 5px;
+    padding: 0px;
+    padding-left: 20px;
     display: flex;
     width: 875px;
-    height: 50px;
+    height: 35px;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: gainsboro;
+    margin-top: -3px;
+
 }
+
 #search-button
 {
     background-color: black;
@@ -164,23 +183,254 @@ svg{
     display: flex;
     color: white;
     border-color: black;
-    margin-bottom: 14px;
+    margin-bottom: -8px;
+    margin-top:-8px;
     vertical-align: middle;
+    font-family: 'Poppins', sans-serif;
+
 }
 .header-b-button
 {
     display: inline-flex;
+    padding-left: 100px;
+    margin-top : -5px;
+
 }
 #signup
 {
   display : flex;  
   background-color: white;
   margin-top: 5px;
+  width : 100px;
+  height: 49px;
+  text-align: center;
+  border-color: lightgray;
+  border-radius: .5px;
+  padding-left: 25px;
+  border-style: solid;
+  border-radius : .50px;
+  font-family: 'Poppins', sans-serif;
+  
+
+}
+.search-box
+{
+    padding: 2px;
+}
+/* .signin-button
+{
+    padding-left: 10px;
+
+} */
+#signin
+{
+/* {
+
+    padding-left: 25px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-style: none;
+    background-color: white;
+    display: flex;
+    text-align: center; */
+    display : flex;  
+   background-color: white;
   width : 110px;
   height: 49px;
   text-align: center;
-  border-color: black;
+  border-color:white;
   border-radius: .5px;
   padding-left: 25px;
+  border-style: solid;
+  border-radius : 0px;
+  font-family: 'Poppins', sans-serif;
+}
+.main-top
+{
+    background-color: #ff6300;
+    background-image: url('https://static.npmjs.com/attachments/ck3uwdslwmr4gc9740vqxa800-bg-teams.png')
 
+}
+.main-img
+{
+     margin-right: auto;
+     margin-left: auto;
+    text-align:center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top:4rem;
+    padding-bottom: 4rem;
+    max-width: 48rem;
+}
+#bears
+{
+    width: 232px;
+    height:232px;
+    max-width: 100%;
+    text-align:center;
+}
+/* .npm-heading
+{
+    font-weight: 600;
+    color: black;
+    margin: .67rem;
+    font-size: 5rem;
+    line-height: 1.25;
+    
+} */
+.npm-heading{
+    font-family: Poppins,sans-serif;
+    font-weight: 600;
+    margin: .67em 0;
+    line-height: 1.25;
+    font-size: 5rem;
+    color: white;
+    width: 736px;
+    font-family: 'Poppins', sans-serif;
+}
+.npm-text
+{
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
+    color: white;    
+    font-family: 'Poppins', sans-serif;
+
+}
+.npm-button
+{
+
+}
+#get-started
+{
+    max-width: 16rem;
+    background: #c12127;
+    border-bottom: solid 5px #fa8717;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    margin-right:240px;
+    margin-left:240px;
+    text-decoration: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: white;
+    display: block;
+    
+}
+.page-bottom
+{
+    padding: 16px 4px;
+    /* margin-right: auto;
+    margin-left: auto;
+} */
+}
+.page-img-block
+{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: block;
+    text-align: center;
+
+}
+.block-title
+{
+    line-height: 1.25;
+    font-weight: 600;
+}
+.page-block
+{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    max-width: 32rem;
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+.page-copy
+{
+    line-height: 1.25;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+.footer{
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-top: 2rem;
+    border-color: rgba(0,0,0,.1);
+}
+.footer-block
+{
+    flex-direction: row;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem;
+    max-width:96rem;
+    display: flex;
+
+
+}
+.block1
+{
+    width:10%;
+    padding: 2rem;
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 0;
+}
+.n-icon
+{
+    width: 50px;
+    padding-top:1rem;
+}
+.block2,.block3,.block4
+{
+    padding: 2rem;
+    width: 30%;
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 0;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+
+}
+.block-title
+{
+    font-size: 17px;
+    letter-spacing: 1.3px;
+    color: #333333;
+}
+ul{
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    padding-left: 0;
+    list-style-type: none;
+}
+.block-list
+{
+  
+    padding-left : 0;
+    list-style-type: none;
+
+}
+.link
+{
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    text-decoration: none;
+    color: black;
+    line-height: 2;
+}
+.footer::after
+{
+    content: "";
+    display: block;
+    height: 10px;
+    width: 100%;
+    background-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff);
 }

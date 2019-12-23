@@ -4,6 +4,7 @@
         npm | Teams
     </title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -30,13 +31,12 @@
                 <div class="header-b-sub">      
                     <div class="npm-font">
                         <a href="/">
-                        <svg viewBox="0 0 780 250">
+                        <svg class="svg-icon" viewBox="0 0 780 250">
                             <path fill="#231F20" d="M240,250h100v-50h100V0H240V250z M340,50h50v100h-50V50z M480,0v200h100V50h50v150h50V50h50v150h50V0H480z M0,200h100V50h50v150h50V0H0V200z"> 
                             </path>
                         </svg>
                         </a>
-                        <div class="search-box">
-                            <div>
+                             <div class="search-box">
                                 <!-- <img src="search.png" alt="search"/> -->
                                 <div class="search-bar-icon">
                                 <img id="search-icon" src="https://img.icons8.com/search">
@@ -47,11 +47,17 @@
                                 <button id="search-button">Search</button>
                                 </div>
                             </div>
-                        </div>
+                    
                             <div class="header-b-button">
                                     <button id="signup">
-                                        SIGN UP
+                                        Sign Up
                                     </button>
+                            </div>
+                            <div class="signin-button">
+                                <button id="signin">
+                                    Sign In
+                                </button>
+
                             </div>
 
                        
@@ -60,17 +66,153 @@
             </div>
 
         <main>
-            <article>
+            <article class="main-top">
                 <div class="color-grad">
-
                 </div>
                 <section class="main-top">
-                    
-                    <div></div>
+                    <div class="main-img">
+                        <img id="bears" src="bear.png" alt="npm"/>
+                        <div class="npm-heading">
+                        npm teams
+                        </div>
+                        <div class="npm-text">
+                            Share code and collaborate with the tools that make
+                            JavaScript the world's best software ecosystem
+                        </div>
+                        <div class="npm-button">
+                            <a id="get-started">
+                                Get started
+                            </a>
+                        </div>
+                    </div>
                 </section>
-
-                </div>
             </article>
-        </main>
+                <section class="page-bottom">
+                    <div class="page-block">
+                    <div class="page-img-block">
+                        <div class="page-img1">
+                            <img src="img1.png" alt="error">
+                        </div>
+                        <h3 class="block-title">
+                            Unlimited public packages
+                        </h3>
+                        <div class="page-copy">
+                             Bring the best of open source JavaScript
+                             development to your own projects.
+                        </div>
+                    </div>
+                    <div class="page-img-block">
+                        <div class="page-img1">
+                            <img src="img2.png" alt="error">
+                        </div>
+                        <h3 class="block-title">
+                            Unlimited private packages
+                        </h3>
+                        <div class="page-copy">
+                            Seamlessly integrate public and private packages into your development cycle.
+                        </div>
+                    </div>
+                    <div class="page-img-block">
+                        <div class="page-img1">
+                            <img src="img3.png" alt="error">
+                        </div>
+                        <h3 class="block-title">
+                            Package-based permissions
+                        </h3>
+                        <div class="page-copy">
+                            Add collaborators to work on your public and private packages together.
+                        </div>
+                    </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="footer-block">
+                    <div class="block1">
+                        <div class="n-icon">
+                            <svg viewBox="0 0 27.23 27.23">
+                            <rect fill="#333333" width="27.23" height="27.23" rx="2"></rect>
+                            <polygon fill="#fff" points="5.8 21.75 13.66 21.75 13.67 9.98 17.59 9.98 17.58 21.76 21.51 21.76 21.52 6.06 5.82 6.04 5.8 21.75"></polygon>
+                        </svg>
+                        </div>
+                    </div>
+                        <div class="block2">
+                            <h3 class="block-title">Help</h3>
+                            <ul>
+                                <li class="block-list">
+                                    <a class="link" href="https://docs.npmjs.com">Documentation</a>
+                                </li>
+                                <li class="block-list" >
+                                    <a class="link" href="https://npm.community">Community</a>
+                                </li class="block-list">
+                                <li class="block-list">
+                                    <a class="link">Resources</a>
+                                </li >
+                                <li class="block-list">
+                                    <a class="link" href="https://www.npmjs.com/advisories">Advisories</a>
+                                </li >
+                                <li class="block-list">
+                                    <a class="link" href="http://status.npmjs.org/">Status</a>
+                                </li>
+                                <li class="block-list">
+                                    <a class="link" >Contact</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <div class="block3">
+                            <h3 class="block-title">About</h3>
+                            <ul>
+                                <li class="block-list">
+                                    <a class="link" href="https://docs.npmjs.com">Documentation</a>
+                                </li>
+                                <li class="block-list" >
+                                    <a class="link" href="https://npm.community">Community</a>
+                                </li class="block-list">
+                                <li class="block-list">
+                                    <a class="link">Resources</a>
+                                </li >
+                                <li class="block-list">
+                                    <a class="link" href="https://www.npmjs.com/advisories">Advisories</a>
+                                </li >
+                                <li class="block-list">
+                                    <a class="link" href="http://status.npmjs.org/">Status</a>
+                                </li>
+                                <li class="block-list">
+                                    <a class="link" >Contact</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <div class="block4">
+                            <h3 class="block-title">Terms & Policies</h3>
+                            <ul>
+                                <li class="block-list">
+                                    <a class="link" href="https://docs.npmjs.com">Documentation</a>
+                                </li>
+                                <li class="block-list" >
+                                    <a class="link" href="https://npm.community">Community</a>
+                                </li class="block-list">
+                                <li class="block-list">
+                                    <a class="link">Resources</a>
+                                </li >
+                                <li class="block-list">
+                                    <a class="link" href="https://www.npmjs.com/advisories">Advisories</a>
+                                </li >
+                                <li class="block-list">
+                                    <a class="link" href="http://status.npmjs.org/">Status</a>
+                                </li>
+                                <li class="block-list">
+                                    <a class="link" >Contact</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                </div>
+                
+            </footer>
 </body>
 </html>
