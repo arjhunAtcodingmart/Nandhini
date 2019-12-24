@@ -3,7 +3,8 @@
     <title>
         Sign in
     </title>
-    <link rel="stylesheet" href="signin.css">
+    <script src="signin.js"></script>
+    <link rel="stylesheet" href="/home/nandhini/Desktop/npm/css/signin.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -26,26 +27,28 @@
         <section class="main-page">
             
             <div class="main-signin">
-                <form id="login" action="/login">
+
                     <h2>
                         Sign in
                     </h2>
                     <div class="login-name">
                         <label class="username">Username</label>
-                        <input id="login-name" type="text">
+                        <input id="login-name" name="Name"type="text">
                     </div>
                     <!-- <div class="forgot">
                          forgot password
                     </div> -->
                     <div class="login-pwd">
                         <label class="password">Password</label>
-                        <input id="login-name" type="password">
-                        <button type="submit" class="signin-submit">Sign In</button>
-                    </div>
+                        <input id="login-name" name="Password" type="password">
+                      </div>
+                   
+                      <button type="submit" class="signin-submit" action="index.html" onclick="redirect()" >Sign In</button>
+                    
                     <div class="create-div">
-                        <a class="create"href="/signup" >Create Account</a>
+                        <a class="create"href="../html/signup.html" >Create Account</a>
                     </div>
-                </form>
+                
                     
                 
             
@@ -54,5 +57,11 @@
         </section>
         </main>
     </div>
+    <script>
+        function redirect()
+        {
+            window.location.href = "file:///home/nandhini/Desktop/npm/html/index.html?";
+        }
+    </script>
 </body>
 </html>

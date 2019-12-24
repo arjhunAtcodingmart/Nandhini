@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Sign up
+    </title>
+    <script src="signin.js"></script>
+    <link rel="stylesheet" href="../css/signup.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <div class="page-top">
+        </div>
+        <div class="page-content">
+        <header>
+            <div class="npm-font">
+                <a href="/">
+                <svg class="svg-icon" viewBox="0 0 780 250">
+                    <path fill="#231F20" d="M240,250h100v-50h100V0H240V250z M340,50h50v100h-50V50z M480,0v200h100V50h50v150h50V50h50v150h50V0H480z M0,200h100V50h50v150h50V0H0V200z"> 
+                    </path>
+                </svg>
+                </a>
+            </div>
+        </header>
+        <main>
+        
+        <section class="main-page">
+            
+            <div class="main-signin">
+            
+                    <h2>
+                        Sign up
+                    </h2>
+                    <div class="login-name">
+                        <label class="username">Full name</label>
+                        <input id="login-name" name="Name"type="text" required>
+                    </div>
+                    <div class="login-name">
+                        <label class="username">Public email</label>
+                        <input id="login-name" name="Name"type="text" required>
+                    </div>
+                    <div class="login-name">
+                        <label class="username">Username</label>
+                        <input id="login-name" name="Name"type="text" required>
+                    </div>                                   
+                    <div class="login-pwd">
+                        <label class="password">Password</label>
+                        <input id="login-name" name="Password" type="password" required>
+                      </div>
+                      <div class="login-name">
+                        <label class="username">Profile photo</label>
+                        <input class="profile-img" type="file" name="pic" accept="image/*">
+                    </div>         
+                   
+                      <button type="submit" class="signin-submit" action="index.html" onclick="redirect()" >Create Account</button>
+                    
+                    <div class="create-div">
+                        <a class="create" href="signin.html">or Login</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </main>
+    </div>
+    <script>
+        function redirect()
+        {
+            alert("Successfully Created Your Account!");
+        }
+    </script>
+</body>
+</html>

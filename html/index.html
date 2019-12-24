@@ -3,7 +3,8 @@
     <title>
         npm | Teams
     </title>
-    <link rel="stylesheet" href="style.css">
+  
+    <link rel="stylesheet" href="/home/nandhini/Desktop/npm/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -38,7 +39,7 @@
                         </a>
                              <div class="search-box">
                                 <div class="search-bar-icon">
-                                <img id="search-icon" src="https://img.icons8.com/search">
+                                <img id="search-icon" src="../image/bear.png">
                                 <form class="form-inline"> <i class="fas fa-search" aria-hidden="true"></i>
                                     <input class="form-control" type="text" placeholder="Search Packages"
                                     aria-label="Search">
@@ -47,15 +48,18 @@
                                 </div>
                             </div>
                     
-                            <div class="header-b-button">
-                                    <button id="signup">
+                            <div class="header-b-button" onclick="redirect()">
+                                    <button id="signup"> 
                                         Sign Up
                                     </button>
                             </div>
                             <div class="signin-button">
-                                <a href="/home/nandhini/Desktop/npm/signin.html" id="signin">
+                                <a href="/home/nandhini/Desktop/npm/html/signin.html" id="signin">
                                     Sign In
                                 </a>
+                                <!-- <div id="user-name">
+
+                                </div> -->
 
                             </div>
 
@@ -70,7 +74,7 @@
                 </div>
                 <section class="main-top">
                     <div class="main-img">
-                        <img id="bears" src="bear.png" alt="npm"/>
+                        <img id="bears" src="img/bear.png" alt="npm"/>
                         <div class="npm-heading">
                         npm teams
                         </div>
@@ -90,7 +94,7 @@
                     <div class="page-block">
                     <div class="page-img-block">
                         <div class="page-img1">
-                            <img src="img1.png" alt="error">
+                            <img src="..image/img1.png" alt="error">
                         </div>
                         <h3 class="block-title">
                             Unlimited public packages
@@ -102,7 +106,7 @@
                     </div>
                     <div class="page-img-block">
                         <div class="page-img1">
-                            <img src="img2.png" alt="error">
+                            <img src="/home/nandhini/Desktop/npm/image/img2.png" alt="error">
                         </div>
                         <h3 class="block-title">
                             Unlimited private packages
@@ -113,7 +117,7 @@
                     </div>
                     <div class="page-img-block">
                         <div class="page-img1">
-                            <img src="img3.png" alt="error">
+                            <img src="../image/img3.png" alt="error">
                         </div>
                         <h3 class="block-title">
                             Package-based permissions
@@ -213,5 +217,15 @@
                 </div>
                 
             </footer>
+            <script src="signin.js"></script>
+            <script>
+                // var user1 = localStorage.getItem("nandhini");
+                // console.log(user1);
+                // document.getElementById('user-name').innerHTML = user1.name;
+                function redirect()
+                {
+                    location.href="file:///home/nandhini/Desktop/npm/html/signup.html"
+                }
+            </script>
 </body>
 </html>
