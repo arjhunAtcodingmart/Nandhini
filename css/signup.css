@@ -28,7 +28,7 @@ svg{
     margin-top :80px;
     margin-bottom : 40px;
 }
-#login-name
+#login-name,#login-mail,#login-user,#login-pwd
 {
     height:38px;
     padding-right: 180px;
@@ -62,7 +62,7 @@ svg{
     background-image: linear-gradient(-180deg, rgba(255, 255, 255, .09) 0%, rgba(17, 17, 17, .04) 100%);
     border: 1px solid rgba(22, 22, 22, .20);
     color: #444;
-    padding-left: 129px;
+    padding-left: 128px;
     padding-right: .1rem;
     text-align:center;
     height:38px;
@@ -101,7 +101,9 @@ svg{
 
 }
 
-.profile-img
+.main-page
 {
-
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+    padding: 40px;
+    width : 383px;
 }

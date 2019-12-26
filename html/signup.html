@@ -3,7 +3,7 @@
     <title>
         Sign up
     </title>
-    <script src="signin.js"></script>
+    <script src="../js/signup.js"></script>
     <link rel="stylesheet" href="../css/signup.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 </head>
@@ -26,47 +26,42 @@
         
         <section class="main-page">
             
-            <div class="main-signin">
+            <form name="myForm" class="main-signin" action="index.html" onsubmit="return validateForm()">
             
                     <h2>
                         Sign up
                     </h2>
                     <div class="login-name">
                         <label class="username">Full name</label>
-                        <input id="login-name" name="Name"type="text" required>
+                        <input id="login-name" name="Name"type="text" required="">
                     </div>
                     <div class="login-name">
                         <label class="username">Public email</label>
-                        <input id="login-name" name="Name"type="text" required>
+                        <input id="login-mail" name="Email" type="email" required="">
                     </div>
                     <div class="login-name">
                         <label class="username">Username</label>
-                        <input id="login-name" name="Name"type="text" required>
+                        <input id="login-user" name="User" type="text" required="">
                     </div>                                   
                     <div class="login-pwd">
                         <label class="password">Password</label>
-                        <input id="login-name" name="Password" type="password" required>
+                        <input id="login-pwd" name="Password" type="password" required="">
                       </div>
                       <div class="login-name">
                         <label class="username">Profile photo</label>
-                        <input class="profile-img" type="file" name="pic" accept="image/*">
+                        <input id="login-profile" class="profile-img" type="file" name="pic" accept="image/*" required="">
                     </div>         
                    
-                      <button type="submit" class="signin-submit" action="index.html" onclick="redirect()" >Create Account</button>
+                      <button type="submit" class="signin-submit" onclick="getDetails()">Create Account</button>
                     
                     <div class="create-div">
                         <a class="create" href="signin.html">or Login</a>
                     </div>
-                </div>
+                </form>
             </div>
         </section>
         </main>
     </div>
-    <script>
-        function redirect()
-        {
-            alert("Successfully Created Your Account!");
-        }
-    </script>
+   
 </body>
 </html>

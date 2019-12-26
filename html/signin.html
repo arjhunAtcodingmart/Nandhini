@@ -3,7 +3,7 @@
     <title>
         Sign in
     </title>
-    <script src="signin.js"></script>
+    <script src="../js/signup.js" ></script>
     <link rel="stylesheet" href="/home/nandhini/Desktop/npm/css/signin.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 </head>
@@ -26,24 +26,24 @@
         
         <section class="main-page">
             
-            <div class="main-signin">
+            <form action="index.html" class="main-signin" method="POST">
 
                     <h2>
                         Sign in
                     </h2>
                     <div class="login-name">
                         <label class="username">Username</label>
-                        <input id="login-name" name="Name"type="text">
+                        <input id="login-nam" name="Name"type="text" required="">
                     </div>
                     <!-- <div class="forgot">
                          forgot password
                     </div> -->
                     <div class="login-pwd">
                         <label class="password">Password</label>
-                        <input id="login-name" name="Password" type="password">
+                        <input id="login-password" name="Password" type="password">
                       </div>
                    
-                      <button type="submit" class="signin-submit" action="index.html" onclick="redirect()" >Sign In</button>
+                      <button type="submit" class="signin-submit" action="index.html" onclick="userDetails()" >Sign In</button>
                     
                     <div class="create-div">
                         <a class="create"href="../html/signup.html" >Create Account</a>
@@ -52,16 +52,11 @@
                     
                 
             
-                </div>
+                </form>
             </div>
         </section>
         </main>
     </div>
-    <script>
-        function redirect()
-        {
-            window.location.href = "file:///home/nandhini/Desktop/npm/html/index.html?";
-        }
-    </script>
+   
 </body>
 </html>
