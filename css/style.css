@@ -41,6 +41,7 @@ margin: 0px;
     letter-spacing: 0.015625em;
     display: inline-block;
     padding-right: 16px;
+    padding-top:4px;
 }
 .header_sub-text-left
 {
@@ -436,4 +437,8 @@ ul{
 #but-in-up
 {
     display: flex;
+}
+#user-redirect
+{
+    text-decoration: none;
 }

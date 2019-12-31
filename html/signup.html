@@ -3,7 +3,7 @@
     <title>
         Sign up
     </title>
-    <script src="../js/signup.js"></script>
+   <!-- <-- <script src="../js/signup.js"></script> - -->
     <link rel="stylesheet" href="../css/signup.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 </head>
@@ -25,31 +25,33 @@
         <main>
         
         <section class="main-page">
+            <div id="myModal" class="modal">
             
-            <form name="myForm" class="main-signin" action="index.html" onsubmit="return validateForm()">
+            <form name="myForm" class="main-signin" onsubmit="return validateForm()">
             
                     <h2>
                         Sign up
                     </h2>
                     <div class="login-name">
                         <label class="username">Full name</label>
-                        <input id="login-name" name="Name"type="text" required="">
+                        <input id="login-name" name="Name"type="text" required>
                     </div>
+                    <button style="font-size:24px"><i class="fa fa-remove"></i></button>
                     <div class="login-name">
                         <label class="username">Public email</label>
-                        <input id="login-mail" name="Email" type="email" required="">
+                        <input id="login-mail" name="Email" type="email" required>
                     </div>
                     <div class="login-name">
                         <label class="username">Username</label>
-                        <input id="login-user" name="User" type="text" required="">
+                        <input id="login-user" name="User" type="text" required>
                     </div>                                   
                     <div class="login-pwd">
                         <label class="password">Password</label>
-                        <input id="login-pwd" name="Password" type="password" required="">
+                        <input id="login-pwd" name="Password" type="password" required>
                       </div>
                       <div class="login-name">
                         <label class="username">Profile photo</label>
-                        <input id="login-profile" class="profile-img" type="file" name="pic" accept="image/*" required="">
+                        <input id="login-profile" class="profile-img" type="file" name="pic" accept="image/*" required>
                     </div>         
                    
                       <button type="submit" class="signin-submit" onclick="getDetails()">Create Account</button>
@@ -58,10 +60,42 @@
                         <a class="create" href="signin.html">or Login</a>
                     </div>
                 </form>
+                </div>
             </div>
         </section>
         </main>
     </div>
+    <script>
+        var account_array=[];
+        var user_account=[];
+    function getDetails()
+{ 
+    event.preventDefault();
+    var name = document.getElementById("login-name").value;
+    var email= document.getElementById("login-mail").value;
+    var username= document.getElementById("login-user").value;
+    var pwd=document.getElementById("login-pwd").value;
+    var profile=document.getElementById("login-profile").value;
+   
+  var account_details= {
+        Name:name,
+        Mail:email,
+        User_name:username,
+        Pwd:pwd,
+        Profile:profile,
+        signin :0
+    }
+    account_array.push(account_details);
+    localStorage.setItem("account",JSON.stringify(account_array));
+  //  user_acc=JSON.parse(localStorage.getItem("account"));
+    //console.log(user_acc);
+    //user_account.push(user_acc); // text1.setAttribute("style","font-weight : 200; color : aquablue;");
+    //localStorage.setItem("user_account",JSON.stringify(user_account));
+    //console.log(user_account);
+    window.location.href="file:///home/nandhini/Desktop/npm/html/index.html"; 
+}
+    
+</script>
    
 </body>
 </html>

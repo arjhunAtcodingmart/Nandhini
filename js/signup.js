@@ -1,13 +1,17 @@
 
+var account_array=[];
+var user_account=[];
+
 function getDetails()
 { 
+    event.preventDefault();
     var name = document.getElementById("login-name").value;
     var email= document.getElementById("login-mail").value;
     var username= document.getElementById("login-user").value;
     var pwd=document.getElementById("login-pwd").value;
     var profile=document.getElementById("login-profile").value;
-    var account_array=[];
-    account_details= {
+   
+  var account_details= {
         Name:name,
         Mail:email,
         User_name:username,
@@ -15,9 +19,14 @@ function getDetails()
         Profile:profile,
         signin :0
     }
-    localStorage.setItem("account_details",JSON.stringify(account_details));
     account_array.push(account_details);
-  // window.location.href="file:///home/nandhini/Desktop/npm/html/index.html"; 
+    localStorage.setItem("account",JSON.stringify(account_array));
+    user_acc=JSON.parse(localStorage.getItem("account_details"));
+    console.log(user_acc);
+    user_account.push(user_acc);
+    localStorage.setItem("user_account",JSON.stringify(user_account));
+    console.log(user_account);
+    window.location.href="file:///home/nandhini/Desktop/npm/html/index.html"; 
 }
 function userDetails()
 {

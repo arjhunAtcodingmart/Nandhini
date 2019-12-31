@@ -5,11 +5,14 @@
     </title>
   
     <link rel="stylesheet" href="/home/nandhini/Desktop/npm/css/style.css">
+    <link rel="stylesheet" href="/home/nandhini/Desktop/npm/css/signup-modal.css">
+    <link rel="stylesheet" href="/home/nandhini/Desktop/npm/css/signin-modal.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
 </head>
 <body>
         <div class="head"> </div>
@@ -19,11 +22,12 @@
                 <span class="header_sub-text-left"> Needs Puma Managers</span>
                 <nav class="nav">
                 <ul class="nav-list">
+                    <li class="list"> <a id="user-redirect" href="../html/user.html">Users</a></li>
                     <li class="list"> Pro</li>
                     <li class="list"> Teams</li>
                     <li class="list"> Pricing</li>
                     <li class="list"> Documentation</li>
-                    <li class="list"> Community</li>
+                    <li class="list"> Community</li> 
                 </ul>
                 </nav>
             </div>
@@ -48,7 +52,7 @@
                                 </div>
                             </div>
                         <span id="but-in-up">
-                            <div class="header-b-button" onclick="redirect()">
+                            <div class="header-b-button" >
                                     <button id="signup"> 
                                         Sign Up
                                     </button>
@@ -62,9 +66,8 @@
                     </div>
                 </div>
             </div>
-
         <main>
-            <article class="main-top">
+            <article class="main-top // text1.setAttribute("style","font-weight : 200; color : aquablue;");">
                 <div class="color-grad">
                 </div>
                 <section class="main-top">
@@ -89,7 +92,7 @@
                     <div class="page-block">
                     <div class="page-img-block">
                         <div class="page-img1">
-                            <img src="..image/img1.png" alt="error">
+                            <img src="../image/img1.png" alt="error">
                         </div>
                         <h3 class="block-title">
                             Unlimited public packages
@@ -155,72 +158,160 @@
                                 <li class="block-list">
                                     <a class="link" >Contact</a>
                                 </li>
-
                             </ul>
-
                         </div>
                         <div class="block3">
                             <h3 class="block-title">About</h3>
                             <ul>
                                 <li class="block-list">
-                                    <a class="link" href="https://docs.npmjs.com">Documentation</a>
+                                    <a class="link" href="https://docs.npmjs.com">Company</a>
                                 </li>
                                 <li class="block-list" >
-                                    <a class="link" href="https://npm.community">Community</a>
+                                    <a class="link" href="https://npm.community">Blog</a>
                                 </li class="block-list">
                                 <li class="block-list">
-                                    <a class="link">Resources</a>
+                                    <a class="link">Career</a>
                                 </li >
                                 <li class="block-list">
-                                    <a class="link" href="https://www.npmjs.com/advisories">Advisories</a>
+                                    <a class="link" href="https://www.npmjs.com/advisories">Webinars</a>
                                 </li >
                                 <li class="block-list">
                                     <a class="link" href="http://status.npmjs.org/">Status</a>
                                 </li>
                                 <li class="block-list">
-                                    <a class="link" >Contact</a>
+                                    <a class="link" >Press</a>
                                 </li>
-
+                                <li class="block-list">
+                                    <a class="link" >Newsletter</a>
+                                </li>
                             </ul>
-
                         </div>
                         <div class="block4">
                             <h3 class="block-title">Terms & Policies</h3>
                             <ul>
                                 <li class="block-list">
-                                    <a class="link" href="https://docs.npmjs.com">Documentation</a>
+                                    <a class="link" href="https://docs.npmjs.com">Policies</a>
                                 </li>
                                 <li class="block-list" >
-                                    <a class="link" href="https://npm.community">Community</a>
+                                    <a class="link" href="https://npm.community">Terms of use</a>
                                 </li class="block-list">
                                 <li class="block-list">
-                                    <a class="link">Resources</a>
+                                    <a class="link">Code of conduct</a>
                                 </li >
-                                <li class="block-list">
-                                    <a class="link" href="https://www.npmjs.com/advisories">Advisories</a>
-                                </li >
-                                <li class="block-list">
-                                    <a class="link" href="http://status.npmjs.org/">Status</a>
-                                </li>
-                                <li class="block-list">
-                                    <a class="link" >Contact</a>
-                                </li>
-
                             </ul>
-
                         </div>
                 </div>
-                
-            </footer>
-            <script src="signin.js"></script>
+                <div>
+                    <div id="myModal" class="modal">
+                    <div class="page-content">
+                    <header>
+                        <div class="npm-font-signup">
+                            <a href="/">
+                            <svg class="svg-icon" viewBox="0 0 780 250">
+                                <path fill="#231F20" d="M240,250h100v-50h100V0H240V250z M340,50h50v100h-50V50z M480,0v200h100V50h50v150h50V50h50v150h50V0H480z M0,200h100V50h50v150h50V0H0V200z"> 
+                                </path>
+                            </svg>
+                            </a>
+                        </div>
+                    </header>
+                    <main>
+                    <section class="main-page">                             
+                    <form name="myForm" class="main-signin">
+                    
+                                <h2>
+                                    Sign up
+                                
+                                <div class="remove-btn">
+                                <button id="remove-btn" style="font-size:15px"><i class="fa fa-remove"></i></button>
+                                </div>
+                                </h2>
+                                <div class="login-name">
+                                    <label class="username">Full name</label>
+                                    <input id="login-name" name="Name"type="text" required = "">
+                                </div>
+                                <div class="login-name">
+                                    <label class="username">Public email</label>
+                                    <input id="login-mail" name="Email" type="email" required="">
+                                </div>
+                                <div class="login-name">
+                                    <label class="username">Username</label>
+                                    <input id="login-user" name="User" type="text" required>
+                                </div>                                   
+                                <div class="login-pwd">
+                                    <label class="password">Password</label>
+                                    <input id="login-pwd" name="Password" type="password" required>
+                                  </div>
+                                  <div class="login-name">
+                                    <label class="username">Profile photo</label>
+                                    <input id="login-profile" class="profile-img" type="file" name="pic" accept="image/*" required>
+                                </div>         
+                               
+                                  <button type="submit" class="signin-submit" onclick="getDetails()">Create Account</button>
+                                
+                                <div class="create-div">
+                                    <a class="create" href="signin.html">or Login</a>
+                                </div>
+                            </form>
+                        </div>
+                </section>
+                </main>
+                </div>                 
+                </div>                
+            </footer>            
             <script>
-                // var user1 = localStorage.getItem("nandhini");
-                // console.log(user1);
-                // document.getElementById('user-name').innerHTML = user1.name;
-                function redirect()
+                var modal = document.getElementById("myModal");
+                var division = document.getElementsByClassName("fa")[0];
+                var btn = document.getElementById("signup");
+                btn.onclick = function()
                 {
-                    location.href="file:///home/nandhini/Desktop/npm/html/signup.html"
+                    modal.style.display = "block";
+                }    
+                division.onclick = function()
+                {
+                    modal.style.display = "none";
+                } 
+                // window.onclick = function(event)
+                // {
+                //      if (event.target == modal) {
+                //      modal.style.display = "none";
+                // }      
+                
+                function getDetails()
+                { 
+                 var name = document.getElementById("login-name").value;
+                 var email= document.getElementById("login-mail").value;
+                 var username= document.getElementById("login-user").value;
+                 var pwd=document.getElementById("login-pwd").value;
+                 var profile=document.getElementById("login-profile").value;
+                 var arrayStroage = JSON.parse(localStorage.getItem("account"));
+                 var arrayLength = arrayStroage.length;
+                 console.log(arrayLength);
+                 var account_details= {
+                 id : arrayLength,
+                 Name:name,
+                 Mail:email,
+                 User_name:username,
+                 Pwd:pwd,
+                 Profile:profile,
+                 signin :0
+                 }
+                
+              
+                 if(localStorage.getItem("account")===null){
+                     var user_acc=[];
+                     user_acc.push(account_details);
+                 localStorage.setItem("account",JSON.stringify(user_acc));
+                 }
+                 else{
+                 user_acc=JSON.parse(localStorage.getItem("account"));
+                 user_acc.push(account_details);
+                 localStorage.setItem("account",JSON.stringify(user_acc));
+                 
+                 console.log(user_acc);
+                 }
+                 window.location.href = "file:///home/nandhini/Desktop/npm/html/index.html";
                 }
-            </script>
+              
+        </script>
 </body>
 </html>

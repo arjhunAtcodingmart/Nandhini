@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>
+        User list
+
+    </title>
+</head>
+<body onload="user_details()" >
+  <main>
+    <div class="topnav">
+      <a class="active" href="#home">USER LIST</a>
+     
+      <div class="search-container">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Search.." name="search">
+          <button id="myInput" onclick="search_content()">search</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+
+ 
+  <div id="list">
+
+  </div>
+
+        
+      
+    
+      <script>
+         var c=0;
+        function user_details(){
+            var name=JSON.parse(localStorage.getItem("account"));
+            var para = document.createElement("P");
+           
+            // console.log(name);
+            name.forEach(ele => {
+              var users = document.createElement("div");
+              users.setAttribute("id","users");
+              users.setAttribute("class","card");
+
+              var lists=document.createElement("P");
+              lists.setAttribute("id","details");
+              lists.setAttribute("class","card-text");
+
+              var text1= document.createTextNode("User-Name:     ");
+              // text1.setAttribute("style","font-weight : 200; color : aquablue;");
+              var username=document.createTextNode(ele.User_name);
+
+              var user_mail=document.createElement("P");
+              user_mail.setAttribute("id","mail");
+              var text2= document.createTextNode("Email:");
+              var mail = document.createTextNode(ele.Mail);
+
+              var btn= document.createElement("BUTTON");
+              btn.setAttribute("class","btn-rem");
+              btn.setAttribute("id",c);
+              btn.setAttribute("onClick","delete_element(this.id)");
+              c++;
+              console.log(c);
+              btn.innerText= "Delete";
+              lists.append(text1);
+              lists.appendChild(username);
+              lists.appendChild(btn);
+              user_mail.append(text2);
+              user_mail.appendChild(mail);
+
+              users.appendChild(lists);
+              users.appendChild(user_mail);
+              // users.appendChild(btn);
+              console.log(lists);
+              document.getElementById("list").appendChild(users);
+              
+            });
+        }    
+             function delete_element(num)
+             {
+               var acc = JSON.parse(localStorage.getItem("account"));
+              acc.splice(num,1);
+              localStorage.setItem("account",JSON.stringify(acc));
+              user_details();
+              document.location.reload(true);
+              console.log(acc);
+             }
+         
+</script>
+
+       
+     
+</body>
+</html>
