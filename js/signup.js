@@ -32,21 +32,34 @@ function userDetails()
 {
     // console.log(details);
     
-    var name= document.getElementById("login-nam").value;
+    var name     = document.getElementById("login-nam").value;
     var password = document.getElementById("login-password").value;
     console.log(name,password);
-    details=JSON.parse(localStorage.getItem("account_details"));
-    console.log(details);
-    if(name === details.User_name && password===details.Pwd){
+    var details=JSON.parse(localStorage.getItem("account"));
+    console.log(details.User_name);
+    let flag=true;
+    details.forEach(elem =>
+        {
+    if(name === elem.User_name && password === elem.Pwd){
         console.log("OK");
         details.signin = 1;
-   // window.location.href = "file:///home/nandhini/Desktop/npm/html/index.html?";
+        alert("Logged in Successfully");
+        redirect()
+        
+        flag=false
     }
-    else 
-    {
+    if(flag) {
+    console.log("OK");
         details.signin = 0;
-        alert("Invalid username or password");
+        alert("Invalid UserName or Password");
+        //window.location.href = "file:///home/nandhini/Desktop/npm/html/index.html";
     }
+});
+
+}
+function redirect()
+{
+    window.location.href = "file:///home/nandhini/Desktop/npm/html/index.html";
 }
 
 function validateForm() {

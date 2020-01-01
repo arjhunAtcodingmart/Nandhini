@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/userEdit.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -17,7 +18,7 @@
       <a class="active" href="#home">USER LIST</a>
      
       <div class="search-container">
-        <form action="/action_page.php">
+        <form>
           <input type="text" placeholder="Search.." name="search">
           <button id="myInput" onclick="search_content()">search</button>
         </form>
@@ -31,14 +32,66 @@
 
   </div>
 
+  <div>
+    <div id="myModal" class="modal">
+    <div class="page-content">
+    <header>
+        <div class="npm-font-signup">
+            <a href="/">
+            <svg class="svg-icon" viewBox="0 0 780 250">
+                <path fill="#231F20" d="M240,250h100v-50h100V0H240V250z M340,50h50v100h-50V50z M480,0v200h100V50h50v150h50V50h50v150h50V0H480z M0,200h100V50h50v150h50V0H0V200z"> 
+                </path>
+            </svg>
+            </a>
+        </div>
+    </header>
+    <main>
+    <section class="main-page">                             
+    <div name="myForm" class="main-signin">
+    
+                <h2>
+                    Edit Your Details 
+                
+                <div class="remove-btn">
+                <button id="remove-btn" style="font-size:15px"><i class="fa fa-remove"></i></button>
+                </div>
+                </h2>
+                <div class="login-name">
+                    <label class="username">Name</label>
+                    <input id="loginName" name="Name"type="text" >
+                </div>
+                <div class="login-name">
+                    <label class="username">Email</label>
+                    <input id="loginMail" name="Email" type="email" >
+                </div>
+                <div class="login-name">
+                    <label class="username">Username</label>
+                    <input id="loginUser" name="User" type="text" >
+                </div>                                   
+                <div class="login-name">
+                    <label class="username">Profile photo</label>
+                    <input id="loginProfile" class="profile-img" type="file" name="pic" accept="image/*" >
+                </div>         
+               
+                <button type="submit" id="editContent" class="signin-submit" onclick="editElement(this.value)">Edit</button>
+                
+               
+            </div>
+        </div>
+</section>
+</main>
+</div>                 
+</div>                
+
         
       
     
       <script>
+           
          var c=0;
         function user_details(){
             var name=JSON.parse(localStorage.getItem("account"));
-            var para = document.createElement("P");
+           
            
             // console.log(name);
             name.forEach(ele => {
@@ -46,12 +99,15 @@
               users.setAttribute("id","users");
               users.setAttribute("class","card");
 
+              var fulName=document.createElement("P");
+              fulName.setAttribute("id","fullname");
+              var text3= document.createTextNode("FullName:");
+              var ful_Name = document.createTextNode(ele.Name);
+
               var lists=document.createElement("P");
               lists.setAttribute("id","details");
               lists.setAttribute("class","card-text");
-
               var text1= document.createTextNode("User-Name:     ");
-              // text1.setAttribute("style","font-weight : 200; color : aquablue;");
               var username=document.createTextNode(ele.User_name);
 
               var user_mail=document.createElement("P");
@@ -59,25 +115,43 @@
               var text2= document.createTextNode("Email:");
               var mail = document.createTextNode(ele.Mail);
 
+              var userImage=document.createElement("SPAN");
+              userImage.setAttribute("id","image");
+              var userImg = document.createTextNode(ele.Profile);
+
               var btn= document.createElement("BUTTON");
               btn.setAttribute("class","btn-rem");
               btn.setAttribute("id",c);
               btn.setAttribute("onClick","delete_element(this.id)");
-              c++;
               console.log(c);
               btn.innerText= "Delete";
+
+              var btn_edit= document.createElement("BUTTON");
+              btn_edit.setAttribute("class","btn-edt");
+              btn_edit.setAttribute("id",c);
+              btn_edit.setAttribute("onClick","editContent(this.id)");
+              btn_edit.innerText="Edit";
+
+              fulName.append(text3);
+              fulName.appendChild(ful_Name);
               lists.append(text1);
               lists.appendChild(username);
+              userImage.appendChild(userImg);
               lists.appendChild(btn);
+              lists.appendChild(btn_edit);
               user_mail.append(text2);
               user_mail.appendChild(mail);
+              
 
+              users.appendChild(fulName);
               users.appendChild(lists);
+              users.appendChild(userImage); 
               users.appendChild(user_mail);
+              
               // users.appendChild(btn);
               console.log(lists);
               document.getElementById("list").appendChild(users);
-              
+              c++;
             });
         }    
              function delete_element(num)
@@ -88,6 +162,54 @@
               user_details();
               document.location.reload(true);
               console.log(acc);
+             }
+            
+              var modal = document.getElementById("myModal");
+              var division = document.getElementsByClassName("fa")[0];
+              function editContent(val)
+              {
+                  console.log("block");
+                  modal.style.display = "block";
+                  localStorage.setItem("id",val);
+              }    
+              division.onclick = function()
+              {
+                  modal.style.display = "none";
+              } 
+              
+             function editElement()
+             {
+              var IdUser=localStorage.getItem("id");
+              console.log(IdUser);
+              var userAcc = JSON.parse(localStorage.getItem("account"));
+              var nameEdit = document.getElementById("loginName").value;
+              var mailEdit = document.getElementById("loginMail").value;
+              var userEdit = document.getElementById("loginUser").value;
+              var profileEdit =  document.getElementById("loginProfile").value;
+             // console.log(nameEdit,values);
+             //alert(IdUser);
+             
+              userAcc.forEach ( element =>
+              {
+              
+               if(IdUser == element.id)
+                 {
+                  
+                  element.Name = nameEdit;
+                  element.Mail = mailEdit;
+                  element.User_name = userEdit;
+                  element.Profile = profileEdit;
+                  //alert(userAcc[element.Name]);
+                  console.log(element);
+                 }
+              });
+              console.log(userAcc);
+              localStorage.setItem("account",JSON.stringify( userAcc));
+              window.location.href="/home/nandhini/Desktop/npm/html/user.html";
+              
+              //console.log(acc);
+              
+              
              }
          
 </script>
